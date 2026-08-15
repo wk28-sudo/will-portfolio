@@ -1,7 +1,7 @@
 <!-- ============================================================
      WILL KARPF: HOME (index.html)
      Multi-page site. Keep ALL files in the SAME folder.
-     Pages: index.html · astros.html · baseball.html · athletics-fund.html · ktru.html
+     Pages: index.html · astros.html · baseball.html · athletics-fund.html · ktru.html · espys.html
      Markers: [YOU]=your words  [LINK]=real URLs
      NOTE: no photos on the home page by design; photos live on the tab pages.
      ============================================================ -->
@@ -13,19 +13,19 @@
 <title>Will Karpf: Sports Business</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style>
   :root{
     --ink:#0B1B2E; --ink-2:#0E2236; --paper:#F5F6F2; --text:#0C1922;
     --muted:#5C6B73; --muted-d:#90A6B8; --accent:#13C26B; --accent-d:#0FA85C;
     --line:#E1E3DB; --line-d:rgba(255,255,255,.12);
-    --display:"Anton",Impact,sans-serif; --body:"Archivo",system-ui,sans-serif; --mono:"Space Mono",ui-monospace,monospace;
+    --display:"Anton",Impact,sans-serif; --body:"Source Serif 4",Georgia,"Times New Roman",serif; --ui:"Archivo",system-ui,sans-serif; --mono:"Space Mono",ui-monospace,monospace;
     --maxw:1140px;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
   @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-  body{background:var(--paper);color:var(--text);font-family:var(--body);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  body{background:var(--paper);color:var(--text);font-family:var(--body);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
   a{color:inherit;text-decoration:none}
   ::selection{background:var(--accent);color:var(--ink)}
   :focus-visible{outline:2px solid var(--accent);outline-offset:3px}
@@ -38,7 +38,7 @@
   .nav-in{display:flex;align-items:center;justify-content:space-between;width:100%}
   .brand{font-family:var(--display);font-size:1.45rem;letter-spacing:.04em;color:#fff;text-transform:uppercase}
   .brand i{color:var(--accent);font-style:normal}
-  .nav-links{display:flex;gap:24px;align-items:center;font-size:.88rem;font-weight:500}
+  .nav-links{display:flex;gap:24px;align-items:center;font-family:var(--ui);font-size:.88rem;font-weight:500}
   .nav-links a{color:rgba(255,255,255,.74);transition:color .2s}
   .nav-links a:hover,.nav-links a.active{color:#fff}
   .nav-links a.active{position:relative}
@@ -73,13 +73,15 @@
   .hero h1 .out{color:transparent;-webkit-text-stroke:2px rgba(255,255,255,.55)}
   @keyframes up{to{transform:translateY(0)}}
   @media(prefers-reduced-motion:reduce){.hero h1 .l b{transform:none;animation:none}}
-  .hero .tag{margin-top:22px;max-width:560px;font-size:clamp(1.02rem,2.2vw,1.22rem);color:#E8EEF2}
-  .now{display:inline-flex;align-items:center;gap:10px;margin-top:22px;font-family:var(--mono);font-size:.8rem;color:#E8EEF2;background:rgba(255,255,255,.05);border:1px solid var(--line-d);padding:9px 16px;border-radius:100px}
-  .now .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 0 rgba(19,194,107,.6);animation:pulse 2.2s infinite}
+  .hero .tag{margin-top:22px;max-width:560px;font-family:var(--body);font-size:clamp(1.02rem,2.2vw,1.22rem);color:#E8EEF2;line-height:1.55}
+  .now{display:inline-flex;align-items:center;justify-content:center;gap:10px;margin-top:22px;font-family:var(--ui);font-size:.8rem;color:#E8EEF2;background:rgba(255,255,255,.05);border:1px solid var(--line-d);padding:9px 16px;border-radius:100px;text-align:center}
+  .now .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 0 rgba(19,194,107,.6);animation:pulse 2.2s infinite;flex-shrink:0}
+  .now-copy{display:inline-flex;align-items:center;flex-wrap:wrap;justify-content:center;gap:.35em;line-height:1.2}
+  .now-role{white-space:nowrap}
   .now b{color:#fff;font-weight:700}
   @keyframes pulse{70%{box-shadow:0 0 0 8px rgba(19,194,107,0)}100%{box-shadow:0 0 0 0 rgba(19,194,107,0)}}
   .hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
-  .btn{font-family:var(--body);font-weight:600;font-size:.95rem;padding:13px 26px;border-radius:6px;display:inline-flex;align-items:center;gap:9px;transition:transform .18s,background .2s,border-color .2s,color .2s}
+  .btn{font-family:var(--ui);font-weight:600;font-size:.95rem;padding:13px 26px;border-radius:6px;display:inline-flex;align-items:center;gap:9px;transition:transform .18s,background .2s,border-color .2s,color .2s}
   .btn:hover{transform:translateY(-2px)}
   .btn-primary{background:var(--accent);color:var(--ink);font-weight:700}
   .btn-primary:hover{background:#fff}
@@ -116,27 +118,28 @@
   .fcard{background:#fff;border:1px solid var(--line);border-radius:14px;padding:30px;transition:transform .25s,box-shadow .25s,border-color .25s}
   .fcard:hover{transform:translateY(-4px);box-shadow:0 18px 40px -24px rgba(11,27,46,.35);border-color:var(--accent)}
   .fcard .ic{width:46px;height:46px;border-radius:10px;background:var(--accent);color:var(--ink);display:grid;place-items:center;font-family:var(--display);font-size:1.4rem;margin-bottom:18px}
-  .fcard h3{font-family:var(--body);font-weight:700;font-size:1.12rem;margin-bottom:8px}
-  .fcard p{color:var(--muted);font-size:.95rem}
+  .fcard h3{font-family:var(--ui);font-weight:700;font-size:1.08rem;margin-bottom:8px;letter-spacing:.01em}
+  .fcard p{color:var(--muted);font-size:.98rem;line-height:1.6}
 
   /* FEATURED astros */
   .feature{background:var(--ink);color:#fff;position:relative;overflow:hidden;border-top:1px solid var(--line-d)}
   .feature .glow{position:absolute;inset:0;background:radial-gradient(700px 420px at 18% 20%,rgba(19,194,107,.16),transparent 60%);pointer-events:none}
   .feature .wrap{position:relative;padding:78px 26px}
-  .feature .flag{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:.72rem;text-transform:uppercase;letter-spacing:.14em;color:var(--ink);background:var(--accent);padding:7px 14px;border-radius:100px;font-weight:700}
+  .feature .flag{display:inline-flex;align-items:center;gap:10px;font-family:var(--ui);font-size:.72rem;text-transform:uppercase;letter-spacing:.14em;color:var(--ink);background:var(--accent);padding:7px 14px;border-radius:100px;font-weight:700}
   .feature .grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:26px;align-items:start}
   @media(max-width:820px){.feature .grid{grid-template-columns:1fr;gap:30px}}
   .feature h3{font-family:var(--display);text-transform:uppercase;font-size:clamp(2.4rem,6vw,4rem);line-height:.92;margin-top:6px}
   .feature h3.title-stack{display:flex;flex-direction:column;gap:.1em;line-height:.92}
   .feature .sub{color:var(--accent);font-family:var(--mono);font-size:.86rem;text-transform:uppercase;letter-spacing:.08em;margin-top:14px}
   .feature .meta{color:var(--muted-d);font-family:var(--mono);font-size:.82rem;margin-top:10px}
+  .feature .lead{color:#D9E2E8;font-family:var(--body);font-size:.98rem;line-height:1.65;margin-top:16px;max-width:44ch}
   .feature ul{list-style:none;margin-top:4px}
-  .feature li{position:relative;padding:12px 0 12px 26px;border-top:1px solid var(--line-d);color:#D9E2E8;font-size:.98rem}
+  .feature li{position:relative;padding:12px 0 12px 26px;border-top:1px solid var(--line-d);color:#D9E2E8;font-size:.98rem;line-height:1.6}
   .feature li:first-child{border-top:none}
   .feature li::before{content:"▸";position:absolute;left:0;top:12px;color:var(--accent)}
   .feature li b{color:#fff;font-weight:600}
   .feature .toolrow{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
-  .tg{font-family:var(--mono);font-size:.72rem;color:#fff;background:rgba(255,255,255,.06);border:1px solid var(--line-d);padding:5px 12px;border-radius:100px}
+  .tg{font-family:var(--ui);font-size:.7rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:#fff;background:rgba(255,255,255,.05);border:1px solid var(--line-d);border-left:2px solid var(--accent);padding:4px 10px;border-radius:2px}
   .feature .more{display:inline-flex;align-items:center;gap:8px;margin-top:26px;font-family:var(--mono);font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;color:var(--accent)}
   .feature .more:hover{gap:14px}
 
@@ -149,10 +152,10 @@
   .job::before{content:"";position:absolute;left:-30px;top:4px;width:14px;height:14px;border-radius:50%;background:var(--paper);border:2px solid var(--line);transition:.3s}
   .job.lit::before{border-color:var(--accent);background:var(--accent)}
   .job .yr{font-family:var(--mono);font-size:.76rem;color:var(--accent);text-transform:uppercase;letter-spacing:.08em}
-  .job h3{font-family:var(--body);font-weight:700;font-size:1.22rem;margin:6px 0 2px}
-  .job .org{color:var(--muted);font-weight:500;margin-bottom:10px}
+  .job h3{font-family:var(--ui);font-weight:700;font-size:1.15rem;margin:6px 0 2px}
+  .job .org{color:var(--muted);font-weight:500;margin-bottom:10px;font-family:var(--body)}
   .job ul{list-style:none;max-width:66ch}
-  .job li{position:relative;padding:5px 0 5px 20px;color:var(--muted);font-size:.96rem}
+  .job li{position:relative;padding:5px 0 5px 20px;color:var(--muted);font-size:.96rem;line-height:1.6}
   .job li::before{content:"–";position:absolute;left:0;color:var(--accent)}
   .job .pagelink{display:inline-block;margin-top:12px;font-family:var(--mono);font-size:.76rem;text-transform:uppercase;letter-spacing:.08em;color:var(--accent)}
   .job .pagelink:hover{text-decoration:underline}
@@ -162,21 +165,21 @@
   .tools .wrap{padding:74px 26px;text-align:center}
   .tools-h{font-family:var(--display);text-transform:uppercase;font-size:clamp(1.6rem,4vw,2.4rem);margin:12px 0 30px}
   .toolgrid{display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
-  .chip{font-family:var(--mono);font-size:.86rem;color:var(--text);background:var(--paper);border:1px solid var(--line);padding:13px 22px;border-radius:100px;transition:transform .2s,border-color .2s,box-shadow .2s}
+  .chip{font-family:var(--ui);font-size:.74rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--text);background:var(--paper);border:1px solid var(--line);border-left:3px solid var(--accent);padding:8px 14px;border-radius:2px;transition:transform .2s,border-color .2s,box-shadow .2s}
   .chip:hover{border-color:var(--accent);transform:translateY(-3px);box-shadow:0 12px 24px -16px rgba(11,27,46,.4)}
 
   /* about (spacing fixed: vertically centered columns) */
   .about-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:50px;align-items:center}
   @media(max-width:780px){.about-grid{grid-template-columns:1fr;gap:30px}}
-  .about p{color:var(--muted);font-size:1.08rem;margin-bottom:16px;max-width:56ch}
+  .about p{color:var(--muted);font-size:1.08rem;margin-bottom:16px;max-width:56ch;line-height:1.65}
   .about p:last-child{margin-bottom:0}
   .about p strong{color:var(--text);font-weight:600}
   .beyond{background:var(--ink);color:#fff;border-radius:16px;padding:30px 32px}
   .beyond h4{font-family:var(--mono);font-size:.74rem;text-transform:uppercase;letter-spacing:.14em;color:var(--accent);margin-bottom:14px}
-  .beyond li{list-style:none;padding:14px 0;border-top:1px solid var(--line-d);color:#D9E2E8;font-size:.95rem}
+  .beyond li{list-style:none;padding:14px 0;border-top:1px solid var(--line-d);color:#D9E2E8;font-size:.95rem;line-height:1.6}
   .beyond li:first-child{border-top:none;padding-top:0}
   .beyond li:last-child{padding-bottom:0}
-  .beyond li b{color:#fff;display:block;font-weight:600;font-family:var(--body);margin-bottom:2px}
+  .beyond li b{color:#fff;display:block;font-weight:600;font-family:var(--ui);font-size:.82rem;letter-spacing:.04em;text-transform:uppercase;margin-bottom:4px}
 
   /* education */
   .edu-grid{display:grid;grid-template-columns:1fr 1fr;gap:46px;align-items:start}
@@ -187,7 +190,7 @@
   .edu-card ul{list-style:none}
   .edu-card li{padding:9px 0;border-top:1px solid var(--line-d);display:flex;justify-content:space-between;gap:14px;font-size:.96rem;color:#D9E2E8}
   .edu-card li b{color:#fff;font-weight:600}
-  .edu-side p{color:var(--muted);margin-bottom:16px;font-size:1.05rem}
+  .edu-side p{color:var(--muted);margin-bottom:16px;font-size:1.05rem;line-height:1.65}
   .edu-side .gpa{font-family:var(--display);font-size:4rem;color:var(--text);line-height:1}
   .edu-side .gpa small{font-family:var(--mono);font-size:.9rem;color:var(--muted);display:block;letter-spacing:.1em;text-transform:uppercase;margin-top:6px}
 
@@ -195,7 +198,7 @@
   .contact{background:var(--ink);color:#fff;padding:96px 0;text-align:center;position:relative;overflow:hidden}
   .contact .glow{position:absolute;inset:0;background:radial-gradient(600px 400px at 50% 0%,rgba(19,194,107,.16),transparent 60%);pointer-events:none}
   .contact h2{font-family:var(--display);text-transform:uppercase;font-size:clamp(2.2rem,6vw,4rem);line-height:1;position:relative}
-  .contact .lead{color:var(--muted-d);margin:18px auto 0;max-width:52ch;position:relative}
+  .contact .lead{color:var(--muted-d);margin:18px auto 0;max-width:52ch;position:relative;font-family:var(--body);line-height:1.65}
   .cinfo{display:flex;flex-wrap:wrap;gap:14px 40px;justify-content:center;margin:34px 0;position:relative}
   .cinfo-emails,.cinfo-phones{display:flex;flex-direction:column;align-items:center;gap:8px}
   .cinfo a{font-family:var(--mono);font-size:.95rem;color:#E8EEF2}
@@ -223,6 +226,7 @@
       <a href="baseball.html">Analytics</a>
       <a href="athletics-fund.html">Athletics Fund</a>
       <a href="ktru.html">KTRU</a>
+      <a href="espys.html">ESPYS</a>
       <a href="#contact">Contact</a>
       <a class="nav-cta" href="resume.html">Resume</a>
     </div>
@@ -248,8 +252,8 @@
       <span class="l"><b>Will</b></span>
       <span class="l"><b class="out">Karpf</b></span>
     </h1>
-    <p class="tag">The business behind the game → front office, analytics &amp; revenue.</p>
-    <span class="now"><span class="dot"></span>Currently: <b>Houston Astros</b>, Business Operations</span>
+    <p class="tag">It is the business that supports the game, and only with the two in sync can a sports organization reach its pinnacle.</p>
+    <span class="now"><span class="dot"></span><span class="now-copy"><span class="now-label">Currently:</span><span class="now-role"><b>Houston Astros</b>, Business Operations</span></span></span>
     <div class="hero-cta">
       <a class="btn btn-primary" href="resume.html">View Resume ↗</a>
       <a class="btn btn-ghost" href="#contact">Get in touch</a>
@@ -258,8 +262,8 @@
   <div class="scroll-hint">Scroll ↓</div>
   <div class="ticker">
     <div class="ticker-track">
-      <span>Front Office Operations</span><span>Ticketing &amp; Revenue</span><span>ProVenue</span><span>Player Development Analytics</span><span>TrackMan</span><span>Scouting Reports</span><span>Fundraising Strategy</span><span>Fan Experience</span>
-      <span>Front Office Operations</span><span>Ticketing &amp; Revenue</span><span>ProVenue</span><span>Player Development Analytics</span><span>TrackMan</span><span>Scouting Reports</span><span>Fundraising Strategy</span><span>Fan Experience</span>
+      <span>Front Office Operations</span><span>Talent Flow</span><span>Ticketing &amp; Revenue</span><span>ProVenue</span><span>Live Broadcast</span><span>Player Development Analytics</span><span>TrackMan</span><span>Event Operations</span><span>Scouting Reports</span><span>Fundraising Strategy</span><span>Production Coordination</span><span>Fan Experience</span>
+      <span>Front Office Operations</span><span>Talent Flow</span><span>Ticketing &amp; Revenue</span><span>ProVenue</span><span>Live Broadcast</span><span>Player Development Analytics</span><span>TrackMan</span><span>Event Operations</span><span>Scouting Reports</span><span>Fundraising Strategy</span><span>Production Coordination</span><span>Fan Experience</span>
     </div>
   </div>
 </header>
@@ -305,19 +309,21 @@
     <span class="flag">★ Current Role · MLB</span>
     <div class="grid">
       <div>
-        <div class="sub">Business Operations Division</div>
+        <div class="sub">MLB · Business Operations Division</div>
         <h3 class="title-stack"><span>Houston</span><span>Astros</span></h3>
-        <div class="meta">Ticket Experience Ambassador · Houston, TX</div>
-        <div class="meta">Apr 2026, Present · On-site</div>
+        <div class="meta">Ticket Experience Ambassador · Business Operations Division</div>
+        <div class="meta">Apr 2026, Present · Houston, Texas · On-site</div>
+        <p class="lead">Working on the Business Operations floor of an MLB front office. Ticketing, revenue, and the fan experience all come together on gameday, from proactive reporting and pricing strategy to live issue resolution at the ballpark.</p>
         <div class="toolrow">
-          <span class="tg">ProVenue</span><span class="tg">Ticketing and Sales</span><span class="tg">Revenue Strategy</span><span class="tg">Client Services</span>
+          <span class="tg">ProVenue</span><span class="tg">Pricing Strategy</span><span class="tg">Ticketing</span><span class="tg">Pivot Tables</span><span class="tg">Client Services</span><span class="tg">Gameday Ops</span>
         </div>
         <a class="more" href="astros.html">See the full role ↗</a>
       </div>
       <ul>
-        <li>Support <b>daily ticketing operations</b> on the Business Operations floor of the Astros front office, resolving complex ticketing issues and collaborating across Account Executives, Ticket Operations leadership, Marketing, and the Foundation.</li>
-        <li>Trained by the Astros Ticket Operations Manager on internal <b>sales, ticketing, and revenue software (ProVenue)</b> and the team's pricing and ticket-services strategy to manage client relationships.</li>
-        <li>Facilitate <b>gameday ticket operations and logistics</b>: troubleshooting mobile ticketing technology and resolving day-of account issues in real time.</li>
+        <li>Support <b>daily ticketing operations</b> on the Business Operations floor and provide solutions to complex ticketing issues.</li>
+        <li>Trained by the <b>Director of Ticket Operations</b> on internal sales, ticketing, and revenue software, plus Astros pricing and ticket-services strategy to manage client relationships and work through any client asks.</li>
+        <li>Conduct and run proactive <b>pre-game ticket and business reports</b>, from fraud to special package offers.</li>
+        <li>Create and set <b>price structures for the 2027 season</b> and assist in building out season ticket structures and pricing.</li>
       </ul>
     </div>
   </div>
@@ -365,6 +371,18 @@
         <a class="pagelink" href="ktru.html">View page ↗</a>
       </div>
 
+      <div class="job reveal">
+        <div class="yr">ESPYS · ESPN</div>
+        <h3>Talent Flow Team</h3>
+        <div class="org">The ESPYS · Live Broadcast</div>
+        <ul>
+          <li>Escorted and managed featured performer Fat Joe and his publicist throughout the live, nationally broadcast awards show.</li>
+          <li>Guided assigned talent through venue entrance, red carpet, seating, dressing room, hot holding, backstage, and post-performance departure on precise live-broadcast timing.</li>
+          <li>Coordinated high-profile talent movement alongside staff, including professional athletes and performers such as the New York Knicks.</li>
+        </ul>
+        <a class="pagelink" href="espys.html">View page ↗</a>
+      </div>
+
     </div>
   </div>
 </section>
@@ -391,8 +409,8 @@
     <div class="section-head reveal"><span class="num">03</span><h2>About</h2><span class="rule"></span></div>
     <div class="about-grid">
       <div class="about reveal">
-        <p>I'm a Sport Management and Economics student at Rice University drawn to the business side of sports: <strong>specifically front-office operations</strong>.</p>
-        <p>What pulls me toward the revenue-generating side of a pro organization is that it sits at the intersection of <strong>business, advocacy, and service</strong>, making sure the fans, the players, and the organization as a whole are properly supported.</p>
+        <p>I'm a Sport Management and Economics student at Rice University focused on the business side of sports: <strong>specifically front-office operations</strong>.</p>
+        <p>What pulls me toward the revenue-generating side of a pro organization is that it encompasses business, advocacy, and service, making sure the fans, the players, and the organization as a whole are properly supported.</p>
         <p>Long term, I want to bring my writing, advocacy, and business skills together into one career.</p>
       </div>
       <div class="reveal">
@@ -401,7 +419,7 @@
           <ul>
             <li><b>Community service</b>Tutoring and curriculum development for global teaching nonprofits.</li>
             <li><b>Writing workshops</b>Hosting workshops for people with less access to writing and teaching resources.</li>
-            <li><b>Creative writing</b>A minor at Rice, and the throughline in how I tell a story.</li>
+            <li><b>Creative writing</b>A minor at Rice, it helps me approach problems in new ways.</li>
           </ul>
         </div>
       </div>
@@ -425,8 +443,7 @@
         </ul>
       </div>
       <div class="edu-side reveal">
-        <p>I'm pairing the economics of how sports organizations make decisions with the management side of running them, and keeping the storytelling sharp with a creative-writing minor.</p>
-        <p>The goal: understand both the spreadsheet and the locker room.</p>
+        <p>I'm pairing the economics of how sports organizations make decisions with the management side of running them. And so the goal is to understand the technical, business, and player sides of the industry.</p>
         <div class="gpa">3.96<small>Cumulative GPA</small></div>
       </div>
     </div>
@@ -456,7 +473,7 @@
   </div>
 </section>
 
-<footer>© 2026 Will Karpf · Built with Cursor ✦</footer>
+<footer>© 2026 Will Karpf · Built with Cursor</footer>
 
 <script>
   const nav=document.getElementById('nav');

@@ -12,18 +12,18 @@
 <title>KTRU Radio — Will Karpf</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style>
   :root{
     --ink:#0B1B2E; --ink-2:#0E2236; --paper:#F5F6F2; --text:#0C1922;
     --muted:#5C6B73; --muted-d:#90A6B8; --accent:#13C26B;
     --line:#E1E3DB; --line-d:rgba(255,255,255,.12);
-    --display:"Anton",Impact,sans-serif; --body:"Archivo",system-ui,sans-serif; --mono:"Space Mono",ui-monospace,monospace;
+    --display:"Anton",Impact,sans-serif; --body:"Source Serif 4",Georgia,"Times New Roman",serif; --ui:"Archivo",system-ui,sans-serif; --mono:"Space Mono",ui-monospace,monospace;
     --maxw:1080px;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
-  body{background:var(--paper);color:var(--text);font-family:var(--body);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  body{background:var(--paper);color:var(--text);font-family:var(--body);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
   a{color:inherit;text-decoration:none}
   ::selection{background:var(--accent);color:var(--ink)}
   :focus-visible{outline:2px solid var(--accent);outline-offset:3px}
@@ -36,7 +36,7 @@
   .nav-in{display:flex;align-items:center;justify-content:space-between;width:100%}
   .brand{font-family:var(--display);font-size:1.45rem;letter-spacing:.04em;color:#fff;text-transform:uppercase}
   .brand i{color:var(--accent);font-style:normal}
-  .nav-links{display:flex;gap:24px;align-items:center;font-size:.88rem;font-weight:500}
+  .nav-links{display:flex;gap:24px;align-items:center;font-family:var(--ui);font-size:.88rem;font-weight:500}
   .nav-links a{color:rgba(255,255,255,.74);transition:color .2s}
   .nav-links a:hover,.nav-links a.active{color:#fff}
   .nav-links a.active{position:relative}
@@ -64,19 +64,19 @@
   .page-hero h1{font-family:var(--display);text-transform:uppercase;font-size:clamp(2.6rem,8vw,5.4rem);line-height:.9}
   .page-hero .role{font-weight:600;font-size:1.18rem;margin-top:14px;color:#E8EEF2}
   .page-hero .meta{font-family:var(--mono);font-size:.82rem;color:var(--muted-d);margin-top:8px}
-  .flag{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:.7rem;text-transform:uppercase;letter-spacing:.14em;color:var(--ink);background:var(--accent);padding:6px 13px;border-radius:100px;font-weight:700;margin-bottom:4px}
+  .flag{display:inline-flex;align-items:center;gap:8px;font-family:var(--ui);font-size:.7rem;text-transform:uppercase;letter-spacing:.14em;color:var(--ink);background:var(--accent);padding:6px 13px;border-radius:100px;font-weight:700;margin-bottom:4px}
 
   /* writeup */
   .exp{padding:74px 0 26px}
-  .exp .lead{font-size:clamp(1.15rem,2.4vw,1.45rem);max-width:62ch;color:var(--text);font-weight:500}
+  .exp .lead{font-family:var(--body);font-size:clamp(1.12rem,2.3vw,1.38rem);max-width:62ch;color:var(--text);font-weight:400;line-height:1.65}
   .exp h2{font-family:var(--display);text-transform:uppercase;font-size:1.5rem;margin:46px 0 18px;letter-spacing:.01em}
   .exp ul{list-style:none;max-width:70ch}
-  .exp li{position:relative;padding:11px 0 11px 24px;border-top:1px solid var(--line);color:var(--muted);font-size:1.02rem}
+  .exp li{position:relative;padding:11px 0 11px 24px;border-top:1px solid var(--line);color:var(--muted);font-size:1.02rem;line-height:1.6}
   .exp li:first-child{border-top:none}
   .exp li::before{content:"▸";position:absolute;left:0;top:11px;color:var(--accent)}
   .exp li b{color:var(--text);font-weight:600}
   .toolrow{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
-  .chip{font-family:var(--mono);font-size:.8rem;color:var(--text);background:#fff;border:1px solid var(--line);padding:9px 16px;border-radius:100px}
+  .chip{font-family:var(--ui);font-size:.74rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--text);background:#fff;border:1px solid var(--line);border-left:3px solid var(--accent);padding:7px 12px;border-radius:2px}
 
   /* gallery — photo placeholders */
   .gallery-sec{padding:30px 0 92px}
@@ -107,7 +107,7 @@
   .cta-strip .glow{position:absolute;inset:0;background:radial-gradient(600px 360px at 50% 0%,rgba(19,194,107,.16),transparent 60%);pointer-events:none}
   .cta-strip h3{font-family:var(--display);text-transform:uppercase;font-size:clamp(1.7rem,4vw,2.6rem);position:relative}
   .cta-strip p{color:var(--muted-d);margin:14px auto 26px;max-width:46ch;position:relative}
-  .btn{font-weight:600;font-size:.95rem;padding:13px 26px;border-radius:6px;display:inline-flex;gap:9px;position:relative;transition:transform .18s,background .2s}
+  .btn{font-family:var(--ui);font-weight:600;font-size:.95rem;padding:13px 26px;border-radius:6px;display:inline-flex;gap:9px;position:relative;transition:transform .18s,background .2s}
   .btn:hover{transform:translateY(-2px)}
   .btn-primary{background:var(--accent);color:var(--ink);font-weight:700}
   .btn-primary:hover{background:#fff}
@@ -130,6 +130,7 @@
       <a href="baseball.html">Analytics</a>
       <a href="athletics-fund.html">Athletics Fund</a>
       <a href="ktru.html" class="active">KTRU</a>
+      <a href="espys.html">ESPYS</a>
       <a href="index.html#contact">Contact</a>
       <a class="nav-cta" href="resume.html">Resume</a>
     </div>
@@ -186,7 +187,7 @@
   <a class="btn btn-primary" href="index.html#contact">Get in touch ↗</a>
 </section>
 
-<footer>© 2026 Will Karpf · Built with Cursor ✦</footer>
+<footer>© 2026 Will Karpf · Built with Cursor</footer>
 
 <div class="lightbox" id="lightbox" hidden>
   <button class="lightbox-close" id="lightboxClose" type="button" aria-label="Close photo">×</button>
